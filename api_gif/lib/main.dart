@@ -15,6 +15,8 @@ class MyApp extends StatelessWidget {
           title: const Center(
             child: Text('API GIF'),
           ),
+          elevation: 8,
+          shadowColor: Colors.black,
         ),
         body: const Center(
           child: Text('Hello World'),
