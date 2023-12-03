@@ -13,7 +13,7 @@ class MyApp extends StatelessWidget {
       home: Scaffold(
         appBar: AppBar(
           title: const Center(
-            child: Text('API GIF'),
+            child: Text('API GIF', style: TextStyle(color: Colors.grey),),
           ),
           elevation: 8,
           shadowColor: Colors.black,
