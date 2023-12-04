@@ -19,7 +19,7 @@ class MyApp extends StatelessWidget {
           shadowColor: Colors.black,
         ),
         body: const Center(
-          child: Text('Hello World'),
+          child: Text('Hello Peru'),
         ),
       ),
     );
