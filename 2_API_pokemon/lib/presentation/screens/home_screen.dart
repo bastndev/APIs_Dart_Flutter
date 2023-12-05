@@ -7,11 +7,13 @@ class HomeScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Petición Http'),
+        title:const Center(
+          child: Text('Http request'),
+        ),
       ),
       body: const SizedBox(),
       floatingActionButton: FloatingActionButton(
-        child: const Icon( Icons.navigate_next ),
+        child: const Icon(Icons.navigate_next),
         onPressed: () {},
       ),
     );
