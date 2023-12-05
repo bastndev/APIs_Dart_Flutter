@@ -1,6 +1,6 @@
 ## APIs for practice Dart and Flutter 💙 
 
-- First you need install [http](https://pub.dev/packages/http)  in "pubspec.yaml"
+- First you need install in "pubspec.yaml" [http](https://pub.dev/packages/http)  
 ```
   cupertino_icons: ^1.0.2
   http: ^1.1.2
