@@ -8,6 +8,6 @@
 2. Working
 >- [API....] ()
 
-<p align="center"><img src="IMG/dogWorking.gif" width="350"></p>
+<p align="center"><img src="IMG/catWorking.gif" width="350"></p>
 
 
