@@ -7,3 +7,7 @@
 
 2. Working
 >- [API....] ()
+
+<p align="center"><img src="IMG/dogWorking.gif" width="350"></p>
+
+
