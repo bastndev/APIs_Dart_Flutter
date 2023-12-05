@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:api_pokemon/config/theme/app_theme.dart';
+import 'package:api_pokemon/presentation/screens/home_screen.dart';
 
 void main() => runApp(const MyApp());
 
@@ -9,17 +11,8 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'Material App',
-      home: Scaffold(
-        appBar: AppBar(
-          title: const Center(
-            child: Text('Material App Bar'),
-          ),
-        ),
-        body: const Center(
-          child: Text('Hello World'),
-        ),
-      ),
+      theme: AppTheme().getTheme(),
+      home: const HomeScreen(),
     );
   }
 }
