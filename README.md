@@ -14,6 +14,6 @@
 2. Working
 >- [API....] ()
 
-<p align="center"><img src="IMG/@bastndev.gif" width="350"></p>
+<p align=""><img src="IMG/@bastndev.gif" width="350"></p>
 
 
