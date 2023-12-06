@@ -44,7 +44,10 @@ class _HomeScreenState extends State<HomeScreen> {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Text(pokemon?.name ?? 'No data'),
-            if (pokemon != null) Image.network(pokemon!.sprites.frontDefault)
+            if (pokemon != null) ...[
+              Image.network(pokemon!.sprites.frontDefault),
+              Image.network(pokemon!.sprites.backDefault)
+            ]
           ],
         ),
       ),
