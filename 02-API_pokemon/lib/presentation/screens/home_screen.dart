@@ -1,6 +1,6 @@
-import 'package:api_pokemon/infrastructure/models/pokemon.dart';
 import 'package:dio/dio.dart';
 import 'package:flutter/material.dart';
+import 'package:api_pokemon/infrastructure/models/pokemon.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
