@@ -14,7 +14,9 @@ class _HomeScreenState extends State<HomeScreen> {
     getPokemon();
   }
 
-  Future<void> getPokemon() async {}
+  Future<void> getPokemon() async {
+    // https://pokeapi.co/api/v2/pokemon/ditto
+  }
 
   @override
   Widget build(BuildContext context) {
