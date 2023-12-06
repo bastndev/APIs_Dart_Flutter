@@ -14,7 +14,7 @@ dependencies:
 ```
 
 > [!NOTE]
-> Json(👀) https://app.quicktype.io/
+> Json (👀) https://app.quicktype.io/
 
 1. API Gif: ``http``
 >- [API Link ↝](https://developers.giphy.com/)
@@ -22,7 +22,7 @@ dependencies:
 2. API Pokemon: ``Dio``
 >- [API Link ↝](https://pokeapi.co/)
 
-<p align=""><img src="IMG/@bastndev.gif"  width="350"> Working 👷</p>
+<p align=""><img src="IMG/@bastndev.gif"  width="350"> Working 👷 API 3</p>
 
 
 
