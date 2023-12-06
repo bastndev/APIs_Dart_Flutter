@@ -14,7 +14,7 @@ dependencies:
 ```
 
 > [!NOTE]
-> Json (👀) https://app.quicktype.io/
+> Json Convert (👀) https://app.quicktype.io/
 
 1. API Gif: ``http``
 >- [API Link ↝](https://developers.giphy.com/)
