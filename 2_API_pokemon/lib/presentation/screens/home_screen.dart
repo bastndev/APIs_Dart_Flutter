@@ -1,3 +1,4 @@
+import 'package:dio/dio.dart';
 import 'package:flutter/material.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -8,6 +9,8 @@ class HomeScreen extends StatefulWidget {
 }
 
 class _HomeScreenState extends State<HomeScreen> {
+  dynamic pokemon;
+
   @override
   void initState() {
     super.initState();
@@ -15,7 +18,9 @@ class _HomeScreenState extends State<HomeScreen> {
   }
 
   Future<void> getPokemon() async {
-    // https://pokeapi.co/api/v2/pokemon/ditto
+    final response = await Dio().get('https://pokeapi.co/api/v2/pokemon/ditto');
+
+    pokemon = response.data;
   }
 
   @override
@@ -31,7 +36,14 @@ class _HomeScreenState extends State<HomeScreen> {
           ),
         ),
       ),
-      body: const SizedBox(),
+      body: const Center(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Text('Name'),
+          ],
+        ),
+      ),
       floatingActionButton: FloatingActionButton(
         child: const Icon(Icons.navigate_next),
         onPressed: () {},
