@@ -11,6 +11,7 @@ class HomeScreen extends StatefulWidget {
 
 class _HomeScreenState extends State<HomeScreen> {
   Pokemon? pokemon;
+  int pokemonId = 0;
 
   @override
   void initState() {
@@ -19,7 +20,9 @@ class _HomeScreenState extends State<HomeScreen> {
   }
 
   Future<void> getPokemon() async {
-    final response = await Dio().get('https://pokeapi.co/api/v2/pokemon/ditto');
+    pokemonId++;
+    final response =
+        await Dio().get('https://pokeapi.co/api/v2/pokemon/$pokemonId');
 
     pokemon = Pokemon.fromJson(response.data);
 
