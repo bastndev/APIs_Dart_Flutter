@@ -5,14 +5,20 @@
   cupertino_icons: ^1.0.2
   http: ^1.1.2
 ```
+- First you need install in "pubspec.yaml" [Dio](https://pub.dev/packages/dio/versions) 
+``` 
+dependencies:
+  cupertino_icons: ^1.0.2
+  dio: ^5.4.0
+```
 
-**WORKING** 👷
+**WORKING** Json👷 https://app.quicktype.io/
 
-1. API Gif
+1. API Gif: http
 >- [API Link ↝](https://developers.giphy.com/)
 
-2. Working
->- [API....] ()
+2. Working: Dio
+>- [API Link ↝](https://pokeapi.co/)
 
 <p align=""><img src="IMG/@bastndev.gif" width="350"></p>
 
