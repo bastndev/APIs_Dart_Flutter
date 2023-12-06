@@ -2,6 +2,7 @@
 
 - First you need install in "pubspec.yaml" [http](https://pub.dev/packages/http)  
 ```
+dependencies:
   cupertino_icons: ^1.0.2
   http: ^1.1.2
 ```
@@ -22,5 +23,20 @@ dependencies:
 >- [API Link ↝](https://pokeapi.co/)
 
 <p align=""><img src="IMG/@bastndev.gif" width="350"></p>
+
+
+
+> [!TIP]
+> Json👷 https://app.quicktype.io/
+
+> [!IMPORTANT]
+> Json👷 https://app.quicktype.io/
+
+> [!WARNING]
+> Json👷 https://app.quicktype.io/
+
+> [!CAUTION]
+> Json👷 https://app.quicktype.io/
+
 
 
