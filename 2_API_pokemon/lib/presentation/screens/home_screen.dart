@@ -35,7 +35,7 @@ class _HomeScreenState extends State<HomeScreen> {
       appBar: AppBar(
         title: Center(
           child: Text(
-            'Number Pokemon: $pokemonId',
+            'Pokemon ID: $pokemonId',
             style: const TextStyle(
               fontWeight: FontWeight.w400,
             ),
