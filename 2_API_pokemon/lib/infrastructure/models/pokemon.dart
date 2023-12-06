@@ -41,50 +41,51 @@ class Pokemon {
     required this.weight,
   });
 
-  factory Pokemon.fromMap(Map<String, dynamic> json) => Pokemon(
+  factory Pokemon.fromJson(Map<String, dynamic> json) => Pokemon(
         abilities: List<Ability>.from(
-            json["abilities"].map((x) => Ability.fromMap(x))),
+            json["abilities"].map((x) => Ability.fromJson(x))),
         baseExperience: json["base_experience"],
-        forms: List<Species>.from(json["forms"].map((x) => Species.fromMap(x))),
+        forms:
+            List<Species>.from(json["forms"].map((x) => Species.fromJson(x))),
         gameIndices: List<GameIndex>.from(
-            json["game_indices"].map((x) => GameIndex.fromMap(x))),
+            json["game_indices"].map((x) => GameIndex.fromJson(x))),
         height: json["height"],
         heldItems: List<HeldItem>.from(
-            json["held_items"].map((x) => HeldItem.fromMap(x))),
+            json["held_items"].map((x) => HeldItem.fromJson(x))),
         id: json["id"],
         isDefault: json["is_default"],
         locationAreaEncounters: json["location_area_encounters"],
-        moves: List<Move>.from(json["moves"].map((x) => Move.fromMap(x))),
+        moves: List<Move>.from(json["moves"].map((x) => Move.fromJson(x))),
         name: json["name"],
         order: json["order"],
         pastAbilities: List<dynamic>.from(json["past_abilities"].map((x) => x)),
         pastTypes: List<dynamic>.from(json["past_types"].map((x) => x)),
-        species: Species.fromMap(json["species"]),
-        sprites: Sprites.fromMap(json["sprites"]),
-        stats: List<Stat>.from(json["stats"].map((x) => Stat.fromMap(x))),
-        types: List<Type>.from(json["types"].map((x) => Type.fromMap(x))),
+        species: Species.fromJson(json["species"]),
+        sprites: Sprites.fromJson(json["sprites"]),
+        stats: List<Stat>.from(json["stats"].map((x) => Stat.fromJson(x))),
+        types: List<Type>.from(json["types"].map((x) => Type.fromJson(x))),
         weight: json["weight"],
       );
 
-  Map<String, dynamic> toMap() => {
-        "abilities": List<dynamic>.from(abilities.map((x) => x.toMap())),
+  Map<String, dynamic> toJson() => {
+        "abilities": List<dynamic>.from(abilities.map((x) => x.toJson())),
         "base_experience": baseExperience,
-        "forms": List<dynamic>.from(forms.map((x) => x.toMap())),
-        "game_indices": List<dynamic>.from(gameIndices.map((x) => x.toMap())),
+        "forms": List<dynamic>.from(forms.map((x) => x.toJson())),
+        "game_indices": List<dynamic>.from(gameIndices.map((x) => x.toJson())),
         "height": height,
-        "held_items": List<dynamic>.from(heldItems.map((x) => x.toMap())),
+        "held_items": List<dynamic>.from(heldItems.map((x) => x.toJson())),
         "id": id,
         "is_default": isDefault,
         "location_area_encounters": locationAreaEncounters,
-        "moves": List<dynamic>.from(moves.map((x) => x.toMap())),
+        "moves": List<dynamic>.from(moves.map((x) => x.toJson())),
         "name": name,
         "order": order,
         "past_abilities": List<dynamic>.from(pastAbilities.map((x) => x)),
         "past_types": List<dynamic>.from(pastTypes.map((x) => x)),
-        "species": species.toMap(),
-        "sprites": sprites.toMap(),
-        "stats": List<dynamic>.from(stats.map((x) => x.toMap())),
-        "types": List<dynamic>.from(types.map((x) => x.toMap())),
+        "species": species.toJson(),
+        "sprites": sprites.toJson(),
+        "stats": List<dynamic>.from(stats.map((x) => x.toJson())),
+        "types": List<dynamic>.from(types.map((x) => x.toJson())),
         "weight": weight,
       };
 }
@@ -100,14 +101,14 @@ class Ability {
     required this.slot,
   });
 
-  factory Ability.fromMap(Map<String, dynamic> json) => Ability(
-        ability: Species.fromMap(json["ability"]),
+  factory Ability.fromJson(Map<String, dynamic> json) => Ability(
+        ability: Species.fromJson(json["ability"]),
         isHidden: json["is_hidden"],
         slot: json["slot"],
       );
 
-  Map<String, dynamic> toMap() => {
-        "ability": ability.toMap(),
+  Map<String, dynamic> toJson() => {
+        "ability": ability.toJson(),
         "is_hidden": isHidden,
         "slot": slot,
       };
@@ -122,12 +123,12 @@ class Species {
     required this.url,
   });
 
-  factory Species.fromMap(Map<String, dynamic> json) => Species(
+  factory Species.fromJson(Map<String, dynamic> json) => Species(
         name: json["name"],
         url: json["url"],
       );
 
-  Map<String, dynamic> toMap() => {
+  Map<String, dynamic> toJson() => {
         "name": name,
         "url": url,
       };
@@ -142,14 +143,14 @@ class GameIndex {
     required this.version,
   });
 
-  factory GameIndex.fromMap(Map<String, dynamic> json) => GameIndex(
+  factory GameIndex.fromJson(Map<String, dynamic> json) => GameIndex(
         gameIndex: json["game_index"],
-        version: Species.fromMap(json["version"]),
+        version: Species.fromJson(json["version"]),
       );
 
-  Map<String, dynamic> toMap() => {
+  Map<String, dynamic> toJson() => {
         "game_index": gameIndex,
-        "version": version.toMap(),
+        "version": version.toJson(),
       };
 }
 
@@ -162,16 +163,16 @@ class HeldItem {
     required this.versionDetails,
   });
 
-  factory HeldItem.fromMap(Map<String, dynamic> json) => HeldItem(
-        item: Species.fromMap(json["item"]),
+  factory HeldItem.fromJson(Map<String, dynamic> json) => HeldItem(
+        item: Species.fromJson(json["item"]),
         versionDetails: List<VersionDetail>.from(
-            json["version_details"].map((x) => VersionDetail.fromMap(x))),
+            json["version_details"].map((x) => VersionDetail.fromJson(x))),
       );
 
-  Map<String, dynamic> toMap() => {
-        "item": item.toMap(),
+  Map<String, dynamic> toJson() => {
+        "item": item.toJson(),
         "version_details":
-            List<dynamic>.from(versionDetails.map((x) => x.toMap())),
+            List<dynamic>.from(versionDetails.map((x) => x.toJson())),
       };
 }
 
@@ -184,14 +185,14 @@ class VersionDetail {
     required this.version,
   });
 
-  factory VersionDetail.fromMap(Map<String, dynamic> json) => VersionDetail(
+  factory VersionDetail.fromJson(Map<String, dynamic> json) => VersionDetail(
         rarity: json["rarity"],
-        version: Species.fromMap(json["version"]),
+        version: Species.fromJson(json["version"]),
       );
 
-  Map<String, dynamic> toMap() => {
+  Map<String, dynamic> toJson() => {
         "rarity": rarity,
-        "version": version.toMap(),
+        "version": version.toJson(),
       };
 }
 
@@ -204,17 +205,17 @@ class Move {
     required this.versionGroupDetails,
   });
 
-  factory Move.fromMap(Map<String, dynamic> json) => Move(
-        move: Species.fromMap(json["move"]),
+  factory Move.fromJson(Map<String, dynamic> json) => Move(
+        move: Species.fromJson(json["move"]),
         versionGroupDetails: List<VersionGroupDetail>.from(
             json["version_group_details"]
-                .map((x) => VersionGroupDetail.fromMap(x))),
+                .map((x) => VersionGroupDetail.fromJson(x))),
       );
 
-  Map<String, dynamic> toMap() => {
-        "move": move.toMap(),
+  Map<String, dynamic> toJson() => {
+        "move": move.toJson(),
         "version_group_details":
-            List<dynamic>.from(versionGroupDetails.map((x) => x.toMap())),
+            List<dynamic>.from(versionGroupDetails.map((x) => x.toJson())),
       };
 }
 
@@ -229,17 +230,17 @@ class VersionGroupDetail {
     required this.versionGroup,
   });
 
-  factory VersionGroupDetail.fromMap(Map<String, dynamic> json) =>
+  factory VersionGroupDetail.fromJson(Map<String, dynamic> json) =>
       VersionGroupDetail(
         levelLearnedAt: json["level_learned_at"],
-        moveLearnMethod: Species.fromMap(json["move_learn_method"]),
-        versionGroup: Species.fromMap(json["version_group"]),
+        moveLearnMethod: Species.fromJson(json["move_learn_method"]),
+        versionGroup: Species.fromJson(json["version_group"]),
       );
 
-  Map<String, dynamic> toMap() => {
+  Map<String, dynamic> toJson() => {
         "level_learned_at": levelLearnedAt,
-        "move_learn_method": moveLearnMethod.toMap(),
-        "version_group": versionGroup.toMap(),
+        "move_learn_method": moveLearnMethod.toJson(),
+        "version_group": versionGroup.toJson(),
       };
 }
 
@@ -250,12 +251,12 @@ class GenerationV {
     required this.blackWhite,
   });
 
-  factory GenerationV.fromMap(Map<String, dynamic> json) => GenerationV(
-        blackWhite: Sprites.fromMap(json["black-white"]),
+  factory GenerationV.fromJson(Map<String, dynamic> json) => GenerationV(
+        blackWhite: Sprites.fromJson(json["black-white"]),
       );
 
-  Map<String, dynamic> toMap() => {
-        "black-white": blackWhite.toMap(),
+  Map<String, dynamic> toJson() => {
+        "black-white": blackWhite.toJson(),
       };
 }
 
@@ -270,16 +271,16 @@ class GenerationIv {
     required this.platinum,
   });
 
-  factory GenerationIv.fromMap(Map<String, dynamic> json) => GenerationIv(
-        diamondPearl: Sprites.fromMap(json["diamond-pearl"]),
-        heartgoldSoulsilver: Sprites.fromMap(json["heartgold-soulsilver"]),
-        platinum: Sprites.fromMap(json["platinum"]),
+  factory GenerationIv.fromJson(Map<String, dynamic> json) => GenerationIv(
+        diamondPearl: Sprites.fromJson(json["diamond-pearl"]),
+        heartgoldSoulsilver: Sprites.fromJson(json["heartgold-soulsilver"]),
+        platinum: Sprites.fromJson(json["platinum"]),
       );
 
-  Map<String, dynamic> toMap() => {
-        "diamond-pearl": diamondPearl.toMap(),
-        "heartgold-soulsilver": heartgoldSoulsilver.toMap(),
-        "platinum": platinum.toMap(),
+  Map<String, dynamic> toJson() => {
+        "diamond-pearl": diamondPearl.toJson(),
+        "heartgold-soulsilver": heartgoldSoulsilver.toJson(),
+        "platinum": platinum.toJson(),
       };
 }
 
@@ -304,28 +305,28 @@ class Versions {
     required this.generationViii,
   });
 
-  factory Versions.fromMap(Map<String, dynamic> json) => Versions(
-        generationI: GenerationI.fromMap(json["generation-i"]),
-        generationIi: GenerationIi.fromMap(json["generation-ii"]),
-        generationIii: GenerationIii.fromMap(json["generation-iii"]),
-        generationIv: GenerationIv.fromMap(json["generation-iv"]),
-        generationV: GenerationV.fromMap(json["generation-v"]),
+  factory Versions.fromJson(Map<String, dynamic> json) => Versions(
+        generationI: GenerationI.fromJson(json["generation-i"]),
+        generationIi: GenerationIi.fromJson(json["generation-ii"]),
+        generationIii: GenerationIii.fromJson(json["generation-iii"]),
+        generationIv: GenerationIv.fromJson(json["generation-iv"]),
+        generationV: GenerationV.fromJson(json["generation-v"]),
         generationVi: Map.from(json["generation-vi"])
-            .map((k, v) => MapEntry<String, Home>(k, Home.fromMap(v))),
-        generationVii: GenerationVii.fromMap(json["generation-vii"]),
-        generationViii: GenerationViii.fromMap(json["generation-viii"]),
+            .map((k, v) => MapEntry<String, Home>(k, Home.fromJson(v))),
+        generationVii: GenerationVii.fromJson(json["generation-vii"]),
+        generationViii: GenerationViii.fromJson(json["generation-viii"]),
       );
 
-  Map<String, dynamic> toMap() => {
-        "generation-i": generationI.toMap(),
-        "generation-ii": generationIi.toMap(),
-        "generation-iii": generationIii.toMap(),
-        "generation-iv": generationIv.toMap(),
-        "generation-v": generationV.toMap(),
+  Map<String, dynamic> toJson() => {
+        "generation-i": generationI.toJson(),
+        "generation-ii": generationIi.toJson(),
+        "generation-iii": generationIii.toJson(),
+        "generation-iv": generationIv.toJson(),
+        "generation-v": generationV.toJson(),
         "generation-vi": Map.from(generationVi)
-            .map((k, v) => MapEntry<String, dynamic>(k, v.toMap())),
-        "generation-vii": generationVii.toMap(),
-        "generation-viii": generationViii.toMap(),
+            .map((k, v) => MapEntry<String, dynamic>(k, v.toJson())),
+        "generation-vii": generationVii.toJson(),
+        "generation-viii": generationViii.toJson(),
       };
 }
 
@@ -356,7 +357,7 @@ class Sprites {
     this.animated,
   });
 
-  factory Sprites.fromMap(Map<String, dynamic> json) => Sprites(
+  factory Sprites.fromJson(Map<String, dynamic> json) => Sprites(
         backDefault: json["back_default"],
         backFemale: json["back_female"],
         backShiny: json["back_shiny"],
@@ -365,15 +366,16 @@ class Sprites {
         frontFemale: json["front_female"],
         frontShiny: json["front_shiny"],
         frontShinyFemale: json["front_shiny_female"],
-        other: json["other"] == null ? null : Other.fromMap(json["other"]),
+        other: json["other"] == null ? null : Other.fromJson(json["other"]),
         versions: json["versions"] == null
             ? null
-            : Versions.fromMap(json["versions"]),
-        animated:
-            json["animated"] == null ? null : Sprites.fromMap(json["animated"]),
+            : Versions.fromJson(json["versions"]),
+        animated: json["animated"] == null
+            ? null
+            : Sprites.fromJson(json["animated"]),
       );
 
-  Map<String, dynamic> toMap() => {
+  Map<String, dynamic> toJson() => {
         "back_default": backDefault,
         "back_female": backFemale,
         "back_shiny": backShiny,
@@ -382,9 +384,9 @@ class Sprites {
         "front_female": frontFemale,
         "front_shiny": frontShiny,
         "front_shiny_female": frontShinyFemale,
-        "other": other?.toMap(),
-        "versions": versions?.toMap(),
-        "animated": animated?.toMap(),
+        "other": other?.toJson(),
+        "versions": versions?.toJson(),
+        "animated": animated?.toJson(),
       };
 }
 
@@ -397,14 +399,14 @@ class GenerationI {
     required this.yellow,
   });
 
-  factory GenerationI.fromMap(Map<String, dynamic> json) => GenerationI(
-        redBlue: RedBlue.fromMap(json["red-blue"]),
-        yellow: RedBlue.fromMap(json["yellow"]),
+  factory GenerationI.fromJson(Map<String, dynamic> json) => GenerationI(
+        redBlue: RedBlue.fromJson(json["red-blue"]),
+        yellow: RedBlue.fromJson(json["yellow"]),
       );
 
-  Map<String, dynamic> toMap() => {
-        "red-blue": redBlue.toMap(),
-        "yellow": yellow.toMap(),
+  Map<String, dynamic> toJson() => {
+        "red-blue": redBlue.toJson(),
+        "yellow": yellow.toJson(),
       };
 }
 
@@ -425,7 +427,7 @@ class RedBlue {
     required this.frontTransparent,
   });
 
-  factory RedBlue.fromMap(Map<String, dynamic> json) => RedBlue(
+  factory RedBlue.fromJson(Map<String, dynamic> json) => RedBlue(
         backDefault: json["back_default"],
         backGray: json["back_gray"],
         backTransparent: json["back_transparent"],
@@ -434,7 +436,7 @@ class RedBlue {
         frontTransparent: json["front_transparent"],
       );
 
-  Map<String, dynamic> toMap() => {
+  Map<String, dynamic> toJson() => {
         "back_default": backDefault,
         "back_gray": backGray,
         "back_transparent": backTransparent,
@@ -455,16 +457,16 @@ class GenerationIi {
     required this.silver,
   });
 
-  factory GenerationIi.fromMap(Map<String, dynamic> json) => GenerationIi(
-        crystal: Crystal.fromMap(json["crystal"]),
-        gold: Gold.fromMap(json["gold"]),
-        silver: Gold.fromMap(json["silver"]),
+  factory GenerationIi.fromJson(Map<String, dynamic> json) => GenerationIi(
+        crystal: Crystal.fromJson(json["crystal"]),
+        gold: Gold.fromJson(json["gold"]),
+        silver: Gold.fromJson(json["silver"]),
       );
 
-  Map<String, dynamic> toMap() => {
-        "crystal": crystal.toMap(),
-        "gold": gold.toMap(),
-        "silver": silver.toMap(),
+  Map<String, dynamic> toJson() => {
+        "crystal": crystal.toJson(),
+        "gold": gold.toJson(),
+        "silver": silver.toJson(),
       };
 }
 
@@ -489,7 +491,7 @@ class Crystal {
     required this.frontTransparent,
   });
 
-  factory Crystal.fromMap(Map<String, dynamic> json) => Crystal(
+  factory Crystal.fromJson(Map<String, dynamic> json) => Crystal(
         backDefault: json["back_default"],
         backShiny: json["back_shiny"],
         backShinyTransparent: json["back_shiny_transparent"],
@@ -500,7 +502,7 @@ class Crystal {
         frontTransparent: json["front_transparent"],
       );
 
-  Map<String, dynamic> toMap() => {
+  Map<String, dynamic> toJson() => {
         "back_default": backDefault,
         "back_shiny": backShiny,
         "back_shiny_transparent": backShinyTransparent,
@@ -527,7 +529,7 @@ class Gold {
     this.frontTransparent,
   });
 
-  factory Gold.fromMap(Map<String, dynamic> json) => Gold(
+  factory Gold.fromJson(Map<String, dynamic> json) => Gold(
         backDefault: json["back_default"],
         backShiny: json["back_shiny"],
         frontDefault: json["front_default"],
@@ -535,7 +537,7 @@ class Gold {
         frontTransparent: json["front_transparent"],
       );
 
-  Map<String, dynamic> toMap() => {
+  Map<String, dynamic> toJson() => {
         "back_default": backDefault,
         "back_shiny": backShiny,
         "front_default": frontDefault,
@@ -555,16 +557,16 @@ class GenerationIii {
     required this.rubySapphire,
   });
 
-  factory GenerationIii.fromMap(Map<String, dynamic> json) => GenerationIii(
-        emerald: OfficialArtwork.fromMap(json["emerald"]),
-        fireredLeafgreen: Gold.fromMap(json["firered-leafgreen"]),
-        rubySapphire: Gold.fromMap(json["ruby-sapphire"]),
+  factory GenerationIii.fromJson(Map<String, dynamic> json) => GenerationIii(
+        emerald: OfficialArtwork.fromJson(json["emerald"]),
+        fireredLeafgreen: Gold.fromJson(json["firered-leafgreen"]),
+        rubySapphire: Gold.fromJson(json["ruby-sapphire"]),
       );
 
-  Map<String, dynamic> toMap() => {
-        "emerald": emerald.toMap(),
-        "firered-leafgreen": fireredLeafgreen.toMap(),
-        "ruby-sapphire": rubySapphire.toMap(),
+  Map<String, dynamic> toJson() => {
+        "emerald": emerald.toJson(),
+        "firered-leafgreen": fireredLeafgreen.toJson(),
+        "ruby-sapphire": rubySapphire.toJson(),
       };
 }
 
@@ -577,12 +579,13 @@ class OfficialArtwork {
     required this.frontShiny,
   });
 
-  factory OfficialArtwork.fromMap(Map<String, dynamic> json) => OfficialArtwork(
+  factory OfficialArtwork.fromJson(Map<String, dynamic> json) =>
+      OfficialArtwork(
         frontDefault: json["front_default"],
         frontShiny: json["front_shiny"],
       );
 
-  Map<String, dynamic> toMap() => {
+  Map<String, dynamic> toJson() => {
         "front_default": frontDefault,
         "front_shiny": frontShiny,
       };
@@ -601,14 +604,14 @@ class Home {
     required this.frontShinyFemale,
   });
 
-  factory Home.fromMap(Map<String, dynamic> json) => Home(
+  factory Home.fromJson(Map<String, dynamic> json) => Home(
         frontDefault: json["front_default"],
         frontFemale: json["front_female"],
         frontShiny: json["front_shiny"],
         frontShinyFemale: json["front_shiny_female"],
       );
 
-  Map<String, dynamic> toMap() => {
+  Map<String, dynamic> toJson() => {
         "front_default": frontDefault,
         "front_female": frontFemale,
         "front_shiny": frontShiny,
@@ -625,14 +628,14 @@ class GenerationVii {
     required this.ultraSunUltraMoon,
   });
 
-  factory GenerationVii.fromMap(Map<String, dynamic> json) => GenerationVii(
-        icons: DreamWorld.fromMap(json["icons"]),
-        ultraSunUltraMoon: Home.fromMap(json["ultra-sun-ultra-moon"]),
+  factory GenerationVii.fromJson(Map<String, dynamic> json) => GenerationVii(
+        icons: DreamWorld.fromJson(json["icons"]),
+        ultraSunUltraMoon: Home.fromJson(json["ultra-sun-ultra-moon"]),
       );
 
-  Map<String, dynamic> toMap() => {
-        "icons": icons.toMap(),
-        "ultra-sun-ultra-moon": ultraSunUltraMoon.toMap(),
+  Map<String, dynamic> toJson() => {
+        "icons": icons.toJson(),
+        "ultra-sun-ultra-moon": ultraSunUltraMoon.toJson(),
       };
 }
 
@@ -645,12 +648,12 @@ class DreamWorld {
     required this.frontFemale,
   });
 
-  factory DreamWorld.fromMap(Map<String, dynamic> json) => DreamWorld(
+  factory DreamWorld.fromJson(Map<String, dynamic> json) => DreamWorld(
         frontDefault: json["front_default"],
         frontFemale: json["front_female"],
       );
 
-  Map<String, dynamic> toMap() => {
+  Map<String, dynamic> toJson() => {
         "front_default": frontDefault,
         "front_female": frontFemale,
       };
@@ -663,12 +666,12 @@ class GenerationViii {
     required this.icons,
   });
 
-  factory GenerationViii.fromMap(Map<String, dynamic> json) => GenerationViii(
-        icons: DreamWorld.fromMap(json["icons"]),
+  factory GenerationViii.fromJson(Map<String, dynamic> json) => GenerationViii(
+        icons: DreamWorld.fromJson(json["icons"]),
       );
 
-  Map<String, dynamic> toMap() => {
-        "icons": icons.toMap(),
+  Map<String, dynamic> toJson() => {
+        "icons": icons.toJson(),
       };
 }
 
@@ -683,16 +686,16 @@ class Other {
     required this.officialArtwork,
   });
 
-  factory Other.fromMap(Map<String, dynamic> json) => Other(
-        dreamWorld: DreamWorld.fromMap(json["dream_world"]),
-        home: Home.fromMap(json["home"]),
-        officialArtwork: OfficialArtwork.fromMap(json["official-artwork"]),
+  factory Other.fromJson(Map<String, dynamic> json) => Other(
+        dreamWorld: DreamWorld.fromJson(json["dream_world"]),
+        home: Home.fromJson(json["home"]),
+        officialArtwork: OfficialArtwork.fromJson(json["official-artwork"]),
       );
 
-  Map<String, dynamic> toMap() => {
-        "dream_world": dreamWorld.toMap(),
-        "home": home.toMap(),
-        "official-artwork": officialArtwork.toMap(),
+  Map<String, dynamic> toJson() => {
+        "dream_world": dreamWorld.toJson(),
+        "home": home.toJson(),
+        "official-artwork": officialArtwork.toJson(),
       };
 }
 
@@ -707,16 +710,16 @@ class Stat {
     required this.stat,
   });
 
-  factory Stat.fromMap(Map<String, dynamic> json) => Stat(
+  factory Stat.fromJson(Map<String, dynamic> json) => Stat(
         baseStat: json["base_stat"],
         effort: json["effort"],
-        stat: Species.fromMap(json["stat"]),
+        stat: Species.fromJson(json["stat"]),
       );
 
-  Map<String, dynamic> toMap() => {
+  Map<String, dynamic> toJson() => {
         "base_stat": baseStat,
         "effort": effort,
-        "stat": stat.toMap(),
+        "stat": stat.toJson(),
       };
 }
 
@@ -729,13 +732,13 @@ class Type {
     required this.type,
   });
 
-  factory Type.fromMap(Map<String, dynamic> json) => Type(
+  factory Type.fromJson(Map<String, dynamic> json) => Type(
         slot: json["slot"],
-        type: Species.fromMap(json["type"]),
+        type: Species.fromJson(json["type"]),
       );
 
-  Map<String, dynamic> toMap() => {
+  Map<String, dynamic> toJson() => {
         "slot": slot,
-        "type": type.toMap(),
+        "type": type.toJson(),
       };
 }
