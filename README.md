@@ -12,7 +12,7 @@ dependencies:
   cupertino_icons: ^1.0.2
   dio: ^5.4.0
 ```
-
+---
 > [!NOTE]
 > Json Convert (👀) https://app.quicktype.io/
 
