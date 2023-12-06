@@ -1,3 +1,4 @@
+import 'package:api_pokemon/infrastructure/models/pokemon.dart';
 import 'package:dio/dio.dart';
 import 'package:flutter/material.dart';
 
@@ -9,7 +10,7 @@ class HomeScreen extends StatefulWidget {
 }
 
 class _HomeScreenState extends State<HomeScreen> {
-  dynamic pokemon;
+  Pokemon? pokemon;
 
   @override
   void initState() {
@@ -20,7 +21,9 @@ class _HomeScreenState extends State<HomeScreen> {
   Future<void> getPokemon() async {
     final response = await Dio().get('https://pokeapi.co/api/v2/pokemon/ditto');
 
-    pokemon = response.data;
+    pokemon = Pokemon.fromJson(response.data);
+
+    setState(() {});
   }
 
   @override
@@ -36,11 +39,12 @@ class _HomeScreenState extends State<HomeScreen> {
           ),
         ),
       ),
-      body: const Center(
+      body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Text('Name'),
+            Text(pokemon?.name ?? 'No data'),
+            if (pokemon != null) Image.network(pokemon!.sprites.frontDefault)
           ],
         ),
       ),
