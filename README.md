@@ -19,7 +19,7 @@ dependencies:
 1. API Gif: http
 >- [API Link ↝](https://developers.giphy.com/)
 
-2. Working: Dio
+2. API Pokemon: Dio
 >- [API Link ↝](https://pokeapi.co/)
 
 <p align=""><img src="IMG/@bastndev.gif" width="350"></p>
