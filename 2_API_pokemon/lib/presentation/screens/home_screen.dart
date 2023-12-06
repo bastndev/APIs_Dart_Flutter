@@ -33,10 +33,10 @@ class _HomeScreenState extends State<HomeScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Center(
+        title: Center(
           child: Text(
-            'Http request',
-            style: TextStyle(
+            'Number Pokemon: $pokemonId',
+            style: const TextStyle(
               fontWeight: FontWeight.w400,
             ),
           ),
