@@ -23,7 +23,7 @@ dependencies:
 >- [API Link ↝](https://pokeapi.co/)
 
 ## Working 👷
-<p align=""><img src="IMG/ala1.gif"  width="250"><img src="IMG/@bastndev.gif"  width="350"><img src="IMG/ala2.gif"  width="250"></p>
+<p align=""><img src="IMG/ala1.gif"  width="250"><img src="IMG/@bastndev.gif"  width="300"><img src="IMG/ala2.gif"  width="250"></p>
 
 
 
