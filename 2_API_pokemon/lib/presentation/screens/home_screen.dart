@@ -10,7 +10,9 @@ class HomeScreen extends StatelessWidget {
         title: const Center(
           child: Text(
             'Http request',
-            style: TextStyle(fontWeight: FontWeight.w400),
+            style: TextStyle(
+              fontWeight: FontWeight.w400,
+            ),
           ),
         ),
       ),
