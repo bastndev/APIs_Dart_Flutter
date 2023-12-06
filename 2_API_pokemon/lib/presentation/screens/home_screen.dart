@@ -55,8 +55,8 @@ class _HomeScreenState extends State<HomeScreen> {
         ),
       ),
       floatingActionButton: FloatingActionButton(
+        onPressed: getPokemon,
         child: const Icon(Icons.navigate_next),
-        onPressed: () {},
       ),
     );
   }
