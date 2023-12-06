@@ -12,7 +12,7 @@ dependencies:
   dio: ^5.4.0
 ```
 
-**WORKING** Json👷 https://app.quicktype.io/
+> [!NOTE] Json👷 https://app.quicktype.io/
 
 1. API Gif: http
 >- [API Link ↝](https://developers.giphy.com/)
