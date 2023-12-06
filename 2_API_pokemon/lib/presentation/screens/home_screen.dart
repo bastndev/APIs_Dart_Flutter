@@ -7,8 +7,11 @@ class HomeScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title:const Center(
-          child: Text('Http request'),
+        title: const Center(
+          child: Text(
+            'Http request',
+            style: TextStyle(fontWeight: FontWeight.w400),
+          ),
         ),
       ),
       body: const SizedBox(),
