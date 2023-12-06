@@ -16,10 +16,10 @@ dependencies:
 > [!NOTE]
 > Json👷 https://app.quicktype.io/
 
-1. API Gif: http
+1. API Gif: ``http``
 >- [API Link ↝](https://developers.giphy.com/)
 
-2. API Pokemon: Dio
+2. API Pokemon: ``Dio``
 >- [API Link ↝](https://pokeapi.co/)
 
 <p align=""><img src="IMG/@bastndev.gif" width="350"></p>
