@@ -1,0 +1,7 @@
+https://dev.twitch.tv/docs/api/
+https://developer.marvel.com/
+https://www.pexels.com/es-es/api/
+
+https://developers.giphy.com/
+https://rapidapi.com/collection/gif-api
+https://pokeapi.co/
